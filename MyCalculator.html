@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <link rel="stylesheet" href="MyCal.css">
+     <script src="Calculator.js"></script>
+  </head>
+  <body>
+    <div class="container">
+     <div class="display">
+       <input class="dis" type="text" id="result" disabled>
+       <button style="float:right; height:55px; width:95px;" value="C" onclick="Clear()">C</button>
+     </div>
+      <div class="row">
+       <div>
+        <button onclick="display(6)">6</button>
+        <button onclick="display(7)">7</button>
+        <button onclick="display(9)">9</button>
+        <button onclick="display('+')">+</button>
+        </div>
+        <div>
+        <button onclick="display(4)">4</button>
+        <button onclick="display(5)">5</button>
+        <button onclick="display(6)">6</button>
+        <button onclick="display('-')">-</button>
+        </div>
+        <div>
+        <button onclick="display(1)">1</button>
+        <button onclick="display(2)">2</button>
+        <button onclick="display(3)">3</button>
+        <button onclick="display('*')">*</button>
+        </div>
+        <button onclick="display(0)">0</button>
+        <button onclick="display('/')">/</button>
+        <button onclick="display('.')">.</button>
+        <button onclick="cal()" >=</button>
+      </div>
+    </div>
+
+  </body>
+</html>
