@@ -4,57 +4,39 @@
     <meta charset="utf-8">
     <title></title>
      <link rel="stylesheet" href="MyCal.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="Calculator.js"></script>
   </head>
   <body>
     <div class="container">
+     <div class="display">
+       <input class="dis" type="text" id="result" disabled>
+       <button style="float:right; height:55px; width:95px;" value="C" onclick="Clear()">C</button>
+     </div>
       <div class="row">
-        <div class="display"></div>
-        <button class="button" type="button" name="button">7</button>
-        <button class="button" type="button" name="button">8</button>
-        <button class="button" type="button" name="button">9</button>
-        <button class="button" type="button" name="button">&larr;</button>
-        <button class="button" type="button" name="button">4</button>
-        <button class="button" type="button" name="button">5</button>
-        <button class="button" type="button" name="button">6</button>
-        <button class="button" type="button" name="button">+</button>
-        <button class="button" type="button" name="button">1</button>
-        <button class="button" type="button" name="button">2</button>
-        <button class="button" type="button" name="button">3</button>
-        <button class="button" type="button" name="button">_</button>
-        <button class="button" type="button" name="button">=</button>
-        <button class="button" type="button" name="button">0</button>
-        <button class="button" type="button" name="button">/</button>
-        <button class="button" type="button" name="button">*</button>
+       <div>
+        <button onclick="display(6)">6</button>
+        <button onclick="display(7)">7</button>
+        <button onclick="display(9)">9</button>
+        <button onclick="display('+')">+</button>
+        </div>
+        <div>
+        <button onclick="display(4)">4</button>
+        <button onclick="display(5)">5</button>
+        <button onclick="display(6)">6</button>
+        <button onclick="display('-')">-</button>
+        </div>
+        <div>
+        <button onclick="display(1)">1</button>
+        <button onclick="display(2)">2</button>
+        <button onclick="display(3)">3</button>
+        <button onclick="display('*')">*</button>
+        </div>
+        <button onclick="display(0)">0</button>
+        <button onclick="display('/')">/</button>
+        <button onclick="display('.')">.</button>
+        <button onclick="cal()" >=</button>
       </div>
     </div>
-  <script>
-   var mykeys = $(".button");
-   // console.log(mykeys[9].innerHTML);
-   // click on any buttons
-   $(".button").on("click", function(){
-     // once clicked then show the value in the display
-     // Where are the values? we need to find values somehow
-     // Now I have every values in mykeys variable (an array)
-     var clickedButton = $(this)[0].innerHTML;
-     // console.log(clickedButton);
-     // console.log(clickedButton[0].innerHTML);
-     // check if clickedButton is a number or an operator
-     var numberRegex = /^[+-]?\d+(\.\d+)?([eE][+-]?\d+)?$/;
-     if(numberRegex.test(clickedButton)) {
-         $(".display").append(clickedButton);
 
-     }
-     // $(".display").append(clickedButton);
-
-     // var numbers = $(".display").text();
-     // console.log(numbers);
-
-
-
-   });
-
-
-  </script>
   </body>
 </html>
